@@ -1,5 +1,11 @@
 # yt-dlp-localhost
 
+yt-dlp-site/
+├── app.py
+├── templates/
+│   └── index.html
+├── downloads/     ← where the videos will be saved
+
 Here's a complete yt-dlp web downloader setup with:
 
 A Flask backend that runs yt-dlp
