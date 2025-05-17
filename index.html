@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>yt-dlp Downloader</title>
+    <style>
+        body { font-family: Arial; padding: 2em; background: #f0f0f0; }
+        form { background: white; padding: 2em; border-radius: 8px; max-width: 500px; margin: auto; }
+        input[type="text"] { width: 100%; padding: 10px; margin-bottom: 1em; }
+        button { padding: 10px 20px; }
+        .message { margin-top: 1em; color: green; }
+    </style>
+</head>
+<body>
+    <form method="post">
+        <h2>Download Video with yt-dlp</h2>
+        <input type="text" name="url" placeholder="Enter video URL" required>
+        <button type="submit">Download</button>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="message">
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+    </form>
+</body>
+</html>
